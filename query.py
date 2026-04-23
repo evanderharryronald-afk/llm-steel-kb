@@ -4,7 +4,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
 CHROMA_DIR = "chroma_db"
-EMBED_MODEL = "BAAI/bge-m3"
+EMBED_MODEL = "BAAI/bge-small-zh-v1.5"
 LLM_MODEL = "qwen2.5:7b"
 
 SYSTEM_PROMPT = """你是一个工厂内部知识库助手，专门回答关于设备操作、工艺规程、故障处理的问题。

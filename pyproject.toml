@@ -1,0 +1,29 @@
+[project]
+name = "steel-kb"
+version = "0.1.0"
+requires-python = ">=3.11, <3.12"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-ollama>=0.3.0",
+    "langchain-huggingface>=0.1.0",
+    "langchain-text-splitters>=0.3.0",
+    "chromadb>=0.4.0",
+    "sentence-transformers>=3.0.0",
+    "pymupdf>=1.24.0",
+    "python-docx>=1.1.0",
+    "gradio>=4.0.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "torchaudio>=2.6.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }

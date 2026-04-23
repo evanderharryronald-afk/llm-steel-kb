@@ -2,13 +2,13 @@ import os
 import fitz
 import docx
 from pathlib import Path
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 DOCS_DIR = "docs"
 CHROMA_DIR = "chroma_db"
-EMBED_MODEL = "BAAI/bge-m3"
+EMBED_MODEL = "BAAI/bge-small-zh-v1.5"
 
 def load_pdf(path):
     doc = fitz.open(path)
